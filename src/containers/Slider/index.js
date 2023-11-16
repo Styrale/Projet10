@@ -8,8 +8,6 @@ const Slider = () => {
   const { data } = useData();
   const [index, setIndex] = useState(0);
   const [timer, setTimer] = useState(null);
-
-  // Vérifier que data?.focus est défini avant de trier
   const byDateDesc = data?.focus
     ? data.focus.sort((evtA, evtB) =>
         new Date(evtA.date) < new Date(evtB.date) ? -1 : 1

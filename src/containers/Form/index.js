@@ -8,7 +8,6 @@ const mockContactApi = () => new Promise((resolve) => { setTimeout(resolve, 1000
 
 const Form = ({ onSuccess, onError }) => {
   const [sending, setSending] = useState(false);
-  // const [isSuccess, setIsSuccess] = useState(false);
 
   const sendContact = useCallback(
     async (evt) => {
@@ -30,9 +29,6 @@ const Form = ({ onSuccess, onError }) => {
 
   return (
     <form onSubmit={sendContact}>
-      {/* {isSuccess && (
-        <div className="success-message"> <font color="#FFFFFF" size="6"> Votre message a été envoyé avec succès ! </font> </div>
-      )} */}
       <div className="row">
         <div className="col">
           <Field placeholder="" label="Nom" />

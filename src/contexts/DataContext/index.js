@@ -4,7 +4,7 @@ import {
   useCallback,
   useContext,
   useEffect,
-  useMemo, // Importez useMemo
+  useMemo,
   useState,
 } from "react";
 
@@ -53,7 +53,6 @@ export const DataProvider = ({ children }) => {
     }
   }, [data, getData]);
 
-  // Utilisez useMemo pour envelopper la valeur du contexte
   const contextValue = useMemo(() => ({
     last,
     data,
